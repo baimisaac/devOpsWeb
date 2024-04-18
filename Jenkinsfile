@@ -20,7 +20,7 @@ stages{
 
         stage ('Deploy to tomcat server'){
                     steps {
-                        deploy adapters: [tomcat9(credentialsId: '6d527977-82c8-4059-973f-c390dc4fb23d', path: '', url: 'http://localhost:8181/')], contextPath: null, war: '**/*.war'
+                        deploy adapters: [tomcat9(credentialsId: '6d527977-82c8-4059-973f-c390dc4fb23d', path: '', url: 'http://localhost:8181/')], contextPath: '/devOpsWeb', war: '**/*.war'
                     }
         }
     }
